@@ -1,0 +1,101 @@
+body {
+   background-color: black;
+   height: 100vh;
+   text-align: center;
+   position: relative;
+   width: 100vw;
+}
+
+body::after {
+   background: url('../img/starwars.webp');
+   background-repeat: no-repeat;
+   background-position: top center;
+   background-size: contain;
+   content: '';
+   opacity: .25;
+   top: 0;
+   left: 0;
+   bottom: 0;
+   right: 0;
+   position: absolute;
+   z-index: -1;
+}
+
+.title {
+   color: white;
+   margin-bottom: 0;
+   padding: 60px;
+   font-size: 50px;
+}
+
+.dropdown,
+.btn {
+   background-color: transparent;
+   border: 2px solid white;
+   color: white;
+   cursor: pointer;
+   letter-spacing: 1px;
+   padding: 12px 24px;
+   text-transform: uppercase;
+   transition: all 0.3 ease-in-out;
+   border-radius: 10px;
+   margin-left: 50px;
+   margin-right: 50px;
+}
+
+.dropdown:hover,
+.btn:hover {
+   border-color: rgb(40, 40, 200);
+   color: rgb(40, 40, 200);
+}
+
+.dropdown:disabled,
+.btn:disabled {
+   background: #ddd;
+   color: #000;
+   opacity: .2;
+   pointer-events: none;
+}
+
+.results {
+   color: white;
+   margin: 40px auto;
+   max-width: 1400px;
+   width: 100%;
+}
+
+.results__row {
+   align-items: center;
+   border: 0.5px solid white;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   width: 100%;
+}
+
+.results__row--categories {
+   color: #000;
+   font-weight: 400;
+   text-transform: uppercase;
+}
+
+.results__row--categories>.results__column {
+   background-color: rgb(40, 40, 200);
+   padding: 0 30px;
+   text-transform: uppercase;
+}
+
+.results__column {
+   border-right: 1px solid;
+   display: flex;
+   flex-direction: column;
+   flex-basis: 100%;
+   flex: 1;
+   justify-content: center;
+   min-height: 40px;
+   text-transform: capitalize;
+}
+
+.results__column:last-of-type {
+   border-right: 0;
+}

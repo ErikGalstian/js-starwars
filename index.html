@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <title>Swapi DEV - Starships Fetch</title>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <link type="text/css" rel="stylesheet" href="css/style.css" />
+   </head>
+   <body>
+        <h1 class="title">Swapi DEV - Starships Fetch</h1>
+        <div class="starships">
+            <div>
+               <button id="fetch" class="btn">Fetch Starships</button>
+               <select id="sort" class="dropdown" disabled>
+                   <option selected disabled value="">Sort By</option>
+                   <option value="name">Starship</option>
+                   <option value="model">Model</option>
+                   <option value="manufacturer">Manufacturer</option>
+                   <option value="length">Length</option>
+                   <option value="passengers">Passengers</option>
+                   <option value="cargo_capacity">Cargo Capacity</option>
+                   <option value="cost_in_credits">Cost in Credits</option>
+               </select>
+            </div>
+            <div class="results">
+                <!-- categories -->
+                <div class="results__row results__row--categories">
+                    <div class="results__column">Startship</div>
+                    <div class="results__column">Model</div>
+                    <div class="results__column">Manufacturer</div>
+                    <div class="results__column">Length</div>
+                    <div class="results__column">Passengers</div>
+                    <div class="results__column">Cargo capacity</div>
+                    <div class="results__column">Cost in credits</div>
+                </div>
+                <!-- table for starships to be populated in  -->
+                <div id="starshipData"></div>
+            </div>
+         </div>
+      <script src="js/script.js"></script>
+   </body>
+</html>
